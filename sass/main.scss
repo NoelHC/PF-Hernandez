@@ -1,0 +1,307 @@
+@use 'globales';
+@import 'globales';
+
+
+
+
+/*MOBILE FIRST*/
+#body_grid
+{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+header {
+    background: rgb(2,0,36);
+    background: rgb(2,0,36);
+    background: linear-gradient(87deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(252,242,0,1) 100%);
+    max-width: 100%;
+  }
+
+main
+{
+
+    background-color: $color-principal-fondo;
+}
+
+body
+{
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+ul li a
+{
+    font-size:20px;
+}
+
+.grid-container1 div
+{
+    &:hover a
+    {
+      background-color: red; 
+      color: $color-principal-fondo;
+    }
+}
+
+.grid-container1 div
+{
+  display:grid;
+  background-color: antiquewhite;
+  grid-template-columns: auto;
+  background-color: antiquewhite;
+  color:white;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+
+  
+}
+
+
+
+
+.grid-container div
+{
+  display:grid;
+  background-color: antiquewhite;
+  grid-template-columns: auto auto;
+  background-color: antiquewhite;
+  color:white;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+
+.grid-container div div
+{
+    animation: myAnim 2s ease 0s 1 normal forwards;
+    &:hover 
+    {
+        background-color: #009ab6; 
+    }
+
+}
+
+
+.nav{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+}
+
+
+
+.anuncio
+{
+    width: auto;
+    height: auto;
+    background-color: $color-principal-fondo;
+    vertical-align: center; 
+    
+   
+}
+
+
+
+.imagenanuncio
+{
+    object-fit: cover;
+    width: 100%;
+
+}
+
+.items
+{
+    width: auto;
+    height: auto;
+}
+
+.volver_arriba
+{
+  position: fixed;
+  left: 1px;
+  bottom: 1px;
+}
+
+.fila
+{
+    background-color: $color-filas;
+    
+    :hover
+    {
+        background-color: $color-principal-fondo;
+    }
+   
+}
+
+
+h1
+{
+    text-align: center;
+
+}
+
+h2
+{
+    text-align: center;
+
+    
+}
+
+.titulos
+{
+    width: 100%;
+    align-items: center;
+}
+
+.logo
+{
+    justify-self: center;
+    
+}
+.buscador
+{
+    justify-self: center;
+}
+
+.menu
+{
+    justify-self: center;
+}
+
+footer
+{
+  background-color: $color-secundario ;
+  padding-top: 1%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 1%;
+  margin-bottom: -1%;
+}
+
+
+html
+{
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.categorias
+{
+    animation: myAnim2 2s ease 0s 1 normal forwards;
+}
+@keyframes myAnim2 {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: translateY(-45px);
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateY(-24px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateY(-12px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateY(-6px);
+	}
+
+	93% {
+		animation-timing-function: ease-in;
+		transform: translateY(-4px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+h6{
+    padding: 100px;
+    background-color: $color-secundario;
+}
+
+@media (min-width: 768px) 
+{
+    
+    h6{
+        padding: 20px;
+        background-color: $color-secundario;
+    }
+    .nav
+    {
+        grid-template-columns: auto auto auto; 
+    }
+
+    li
+    {
+        display: inline-block;
+        padding: 10px;
+        list-style: none;
+        
+    }
+    .buscador
+    {
+        display: inline-block;
+        padding-top: 10%;
+        list-style: none;
+        
+    }
+    
+    .doblecolumna
+    {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .imagenanuncio
+    {
+    object-fit:scale-down;
+    width: 100%;
+ 
+    }
+    
+    .grid-container
+    {
+        align-self: auto;  
+    }
+}
